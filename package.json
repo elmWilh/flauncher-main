@@ -1,0 +1,43 @@
+{
+  "name": "fugance-launcher",
+  "version": "0.1.0",
+  "description": "Custom Minecraft Launcher",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "minecraft",
+    "launcher"
+  ],
+  "author": "GuFugu",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "minecraft-launcher-core": "^3.17.1",
+    "msmc": "^5.0.4",
+    "node-fetch": "^3.3.2",
+    "raw": "^0.1.4"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "^22.14.5"
+  },
+  "build": {
+    "appId": "com.fugance.launcher",
+    "asar": true,
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "license": "LICENSE.rtf"
+    },
+    "win": {
+      "icon": "icons/app.ico",
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}

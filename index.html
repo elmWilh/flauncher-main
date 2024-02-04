@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minecraft Launcher</title>
+    <script src="renderer.js"></script>
+    <script src="web.js"></script>
+    <link rel="stylesheet" href="styles.css">    
+    <script src="https://cdn.jsdelivr.net/npm/nanobar"></script>
+</head>
+
+<div id="welcomeModal" class="modal">
+    <div class="modal-content">
+        <h2>Добро пожаловать в Fugance Launcher!</h2>
+        <img src="icons/Fish.png" alt="Welcome" style="width:100%;margin-bottom:20px;">
+        <button id="playWithAccount" class="button">Играть с аккаунтом Microsoft</button>
+        <button id="playWithoutAccount" class="button">Играть с обычными настройками</button>
+    </div>
+</div>
+
+<body>
+    <div class="title-bar">
+        <div class="title-bar-img"><img src="icons/Fish.png" alt="fish"></div>
+        <div class="title-bar-text">Fugance Launcher</div>
+        <div class="title-bar-controls">
+            <button class="close-button" onclick="window.close()"><img src="icons/close.png" alt="close"></button>
+        </div>
+    </div>
+    <div class="version-text" style="position: absolute; top: 95%; left: 2%; color: #b8ffb8; display: none;">© (2023 - 2024) Fugances.xyz.
+    </div>
+    <div class="container">
+        <h1 class="title" style="font-family: 'Minecrafter', Arial, sans-serif; font-size: 25px;">Fugance Launcher</h1>
+        <div class="input-field">
+            <label for="usernameInput" style="font-family: 'Minecrafte', Arial, sans-serif;">Никнейм</label>
+            <input id="usernameInput" type="text" placeholder="Введите ваш никнейм">
+        </div>
+
+        <div class="slider">
+            <label for="ramSlider" style="font-family: 'Minecrafte', Arial, sans-serif;">ОЗУ: <span id="ramAmount">4
+                    GB</span></label>
+            <input id="ramSlider" type="range" min="4" max="16" value="4">
+        </div>
+
+        <div class="input-field">
+            <label for="usernameInput" style="font-family: 'Minecrafte', Arial, sans-serif;">Версия</label>
+            <select id="versionSelect"></select>
+        </div>
+
+        <div class="input-field">
+            <label for="usernameInput" style="font-family: 'Minecrafte', Arial, sans-serif;">Выбор Java</label>
+            <select id="javaSelect"></select>
+        </div>
+
+        <button id="launchMinecraftButton" class="button">Запустить</button>
+        <div class="progress-bar">
+            <div id="gameLoadProgress"></div>
+            <span id="gameLoadProgressValue" style="font-family: 'Minecrafte', Arial, sans-serif;">0%</span>
+        </div>
+        <h5 id="gameLoadDescription" style="margin-top: 4px;"></h5>
+    </div>
+</body>
+
+</html>
